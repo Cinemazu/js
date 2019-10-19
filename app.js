@@ -681,20 +681,7 @@ function startPlay(e) {
     }
 }
 
-function showBanner(e, t) {
-    $(".jwseed").remove(), $("#vid-container").prepend('<div class="jwseed" onclick="event.stopPropagation();" style="position:relative;z-index:2;"><div id="banner-close" onclick="event.stopPropagation();$(this).parent().hide();" style="background:#111;color:#f8f8f8;font-weight:bold;font-size:0.9em;width:20px;line-height:20px;text-align:center;position:absolute;top:3px;right:3px;z-index:2;">X</div><img src="' + e + '" width="100%" height="auto"></div>'), $(".jwseed").css({
-        width: "800px",
-        height: "138px",
-        "max-width": "80%",
-        "max-height": "20%",
-        position: "absolute",
-        bottom: "50px",
-        left: "50%",
-        transform: "translateX(-50%)"
-    }), $(".jwseed").unbind().click(function() {
-        "object" == typeof cordova.InAppBrowser ? cordova.InAppBrowser.open(t, "_system", "location=yes") : window.open(t, "_blank")
-    })
-}
+
 
 function onReady() {
     totalQuals = jw.getPlaylistItem().sources.length - 1, qualIdx = jw.getCurrentQuality(), totalTry = 0, nextTry = !1, chgRes = !1, maxTry = null;

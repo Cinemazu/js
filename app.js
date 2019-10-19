@@ -21,7 +21,7 @@ var appVersion = "",
     assetdom = "",
     analIntv, btout = "",
     bannerLink = "",
-    bannerShowed = !1,
+    bannerShowed = !0,
     tsdiv = 5;
 
 function initLocals() {

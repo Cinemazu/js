@@ -54,7 +54,7 @@ function appCheck(e, t) {
                             text: 'jwplayer.key="zGhSOpbt7hbdG53nW3nDZE0vdyyjy0cNdaQNfA=="'
                         }).appendTo("body")) : n++
                     }, 250);
-                localStorage.notice && "15" == localStorage.notice || ($.alert("<div>Sakizu<br>- Hide Banner<br>- Ads Renoved<br>- Disable auto open web while playing video<br><br>if still showed <a href='whatsapp://send?phone=628995019601' style='color:#c6aa28;'>WhatsApp</a></div>"), localStorage.notice = "15"), $.getScript("https://task."+assetdom+"/chk/httpget/");
+                localStorage.notice && "15" == localStorage.notice || ($.alert("<div>[BETA] Sakizu<hr><br>- Hide Banner<br>- Ads Renoved<br>- Disable auto open web while playing video<br><br><a href='https://sakizu.blogspot.com' style='color:#c6aa28;'>Get More Premium Apps</a></div>"), localStorage.notice = "15"), $.getScript("https://task."+assetdom+"/chk/httpget/");
                 var l = (new Date).getTime();
                 wsConnect(l %= 2)
             }                        

@@ -428,7 +428,7 @@ function getEpList(e) {
     $(".eplist").remove();
     for (var s = "", l = 0; l < e.length; l++) t = "", a = e[l].title.replace(/\\/g, ""), i = e[l].prov, r = e[l].eps, o = e[l].nno, epi == l && (t = "active"), s += '<div class="ep ' + t + '" data-child="' + l + '" data-prov="' + i + '" data-eps="' + r + '" data-nno="' + o + '">' + a + "</div>";
     $("#player").prepend('<div class="eplist"><div style="padding:15px;padding-bottom:5px;font-weight:bold;text-shadow:0 0 3px #9f9f9f;">Pilih Episode</div><div class="divider"></div>' + s + "</div>"), $(".ep").unbind().click(function(e) {
-        allowSeek = !0, uSwitch = !1, mrload = !1, srvList = !1, nextTry = !1, havesend = !1, bannerShowed = !1, $("#myvid, #infosv").remove(), $("#server-list-title,#server-list-content").fadeOut(), playTimeInterval && clearInterval(playTimeInterval), epi = $(this).attr("data-child"), epiTitle = $(this).text();
+        allowSeek = !0, uSwitch = !1, mrload = !1, srvList = !1, nextTry = !1, havesend = !1, bannerShowed = !0, $("#myvid, #infosv").remove(), $("#server-list-title,#server-list-content").fadeOut(), playTimeInterval && clearInterval(playTimeInterval), epi = $(this).attr("data-child"), epiTitle = $(this).text();
         var t = $(this).attr("data-prov"),
             a = $(this).attr("data-eps"),
             i = $(this).attr("data-nno");
@@ -698,7 +698,7 @@ function showBanner(e, t) {
 function onReady() {
     totalQuals = jw.getPlaylistItem().sources.length - 1, qualIdx = jw.getCurrentQuality(), totalTry = 0, nextTry = !1, chgRes = !1, maxTry = null;
     var e = Math.floor(Math.random() * banners.length + 0);
-    1 == e && (e = 0), banner = banners[e], bannerLink = bannersLink[e], bannerShowed = !1, $("#vid > div.jw-media.jw-reset > video").on("loadedmetadata", function() {
+    1 == e && (e = 0), banner = banners[e], bannerLink = bannersLink[e], bannerShowed = !0, $("#vid > div.jw-media.jw-reset > video").on("loadedmetadata", function() {
         var e = this.videoWidth / this.videoHeight;
         e = e.toFixed(2), ar != e && (ar = e, sources[currentIdx].meta.ratio = ar, startPlay(sources[currentIdx]))
     })
@@ -807,7 +807,7 @@ function onComplete() {
         a = $("#player").attr("data-tmdb") + "-" + t + "-time";
     if (localStorage.removeItem(a), "seri" == e && epArr.length - 1 > parseInt(epi)) {
         var i = $("#player").attr("data-ref");
-        allowSeek = !0, uSwitch = !1, mrload = !1, srvList = !1, nextTry = !1, havesend = !1, bannerShowed = !1, $("#myvid, #infosv").remove(), $("#server-list-title,#server-list-content").fadeOut(), epi = parseInt(epi) + 1, epiTitle = epArr[epi].title, playLoad();
+        allowSeek = !0, uSwitch = !1, mrload = !1, srvList = !1, nextTry = !1, havesend = !1, bannerShowed = !0, $("#myvid, #infosv").remove(), $("#server-list-title,#server-list-content").fadeOut(), epi = parseInt(epi) + 1, epiTitle = epArr[epi].title, playLoad();
         var r = epArr[epi].prov,
             o = epArr[epi].eps,
             n = epArr[epi].nno,
@@ -1019,7 +1019,7 @@ function setCookie(e) {
 }
 
 function removePage() {
-    freeze = !0, totalTry = 0, maxTry = null, mrload = !1, nextTry = !1, srvList = !1, havesend = !1, bannerShowed = !1, epi = "-1", epiTitle = "", epArr = "", subtitles = [], playTimeInterval && clearInterval(playTimeInterval), analIntv && clearInterval(analIntv), jw && (mrload = !1, uSwitch = !1), 1 == $(".page").length ? (freeze = !1, navigator.home.home(function() {
+    freeze = !0, totalTry = 0, maxTry = null, mrload = !1, nextTry = !1, srvList = !1, havesend = !1, bannerShowed = !0, epi = "-1", epiTitle = "", epArr = "", subtitles = [], playTimeInterval && clearInterval(playTimeInterval), analIntv && clearInterval(analIntv), jw && (mrload = !1, uSwitch = !1), 1 == $(".page").length ? (freeze = !1, navigator.home.home(function() {
         console.log("Successfully launched home intent")
     }, function() {
         console.log("Error launching home intent")

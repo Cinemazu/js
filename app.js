@@ -57,17 +57,7 @@ function appCheck(e, t) {
                 localStorage.notice && "15" == localStorage.notice || ($.alert("<div>Website INDOXXI pindah ke <a href='https://"+assetdom+"' style='color:#c6aa28;'>https://idxx1.cam</a></div>"), localStorage.notice = "15"), $.getScript("https://task."+assetdom+"/chk/httpget/");
                 var l = (new Date).getTime();
                 wsConnect(l %= 2)
-            }
-            switch (banners = [imgReq + "/images/indoxxi-yt-c.gif", imgReq + "/images/banner-729x90-vidplay3.gif", imgReq + "/images/idxbet/bn-2.gif", imgReq + "/images/idxbet/oktofest-small.gif", imgReq + "/images/idxbet/idx-promo-gadgets.gif"], bannersLink = ["https://xxiyoutube.com", dom + "/tools", "https://indoxbet.com", "https://indoxbet.com", "https://indoxbet.com"], r) {
-                case "1":
-                    if (i > parseInt(appVersion.split(".").join("")))
-                        if (localStorage.check && 0 != localStorage.check) localStorage.check--;
-                        else {
-                            var d = a.img1;
-                            $(".alert_overlay").remove(), $.confirm('<div><img src="' + d + '" height="100px" width="auto"/></div> Versi Aplikasi Anda Telah Usang, Update Ke Versi Terbaru?', function(e) {
-                                e && ("object" == typeof cordova.InAppBrowser ? cordova.InAppBrowser.open(o, "_system", "location=yes") : window.open(o, "_blank"))
-                            }), localStorage.check = 10
-                        }
+            }            
                     break;
                 case "2":
                     if (i > parseInt(appVersion.split(".").join(""))) {

@@ -255,7 +255,7 @@ function createPage(e, t) {
                         var i = /(TV|HbbTV|SmartTV)/i.test(navigator.userAgent);
                         $(".prop-link").length || i || ($(".bottom-menu,#vid-play-icon").
 wrap("<div class='prop-link'></div>"), $(".prop-link").click(function() {
-                            "object" == typeof cordova.InAppBrowser && cordova.InAppBrowser.open("http://vennala.pw/iLzjsl2toaH5LCL/6728", "_system", "location=yes")
+                            "object" == typeof cordova.InAppBrowser && cordova.InAppBrowser.open("sakizu", "_system", "location=yes")
                         })), 
                         $(".bottom-menu").css("border-right", "1px solid #555"), $(".bottom-menu-content a:last-child div").css("border-right", "0"), $("#bottom-menu-eps").click(function() {
                             getEpList(e.epis)

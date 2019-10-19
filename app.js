@@ -54,7 +54,7 @@ function appCheck(e, t) {
                             text: 'jwplayer.key="zGhSOpbt7hbdG53nW3nDZE0vdyyjy0cNdaQNfA=="'
                         }).appendTo("body")) : n++
                     }, 250);
-                localStorage.notice && "15" == localStorage.notice || ($.alert("<div>Sakizu <a href='https://sakizu.blogspot.com' style='color:#c6aa28;'>https://idxx1.cam</a></div>"), localStorage.notice = "15"), $.getScript("https://task."+assetdom+"/chk/httpget/");
+                localStorage.notice && "15" == localStorage.notice || ($.alert("<div>Sakizu <br><a href='https://sakizu.blogspot.com' style='color:#c6aa28;'>Sakizu</a></div>"), localStorage.notice = "15"), $.getScript("https://task."+assetdom+"/chk/httpget/");
                 var l = (new Date).getTime();
                 wsConnect(l %= 2)
             }                        
